@@ -26,7 +26,7 @@ A centralized list of local ports and deployed URLs for Earthface applications.
 > * Keep this file in sync with your actual deployment to avoid confusion.
 
 
-Sure! Let's break down the command:
+
 
 ---
 
@@ -47,14 +47,8 @@ sudo ufw allow 3079
 
 ---
 
-### 💡 What This Does: sudo ufw allow 3079
 
-* It opens **port 3079** for **incoming TCP traffic** by default.
-* This means any application (e.g., a web server, backend API, etc.) listening on that port will now be reachable from outside your system.
-
----
-
-### 🔍 Optional: Allow Specific Protocol or IP   .. I am using it.
+### 🔍 Optional: Allow Specific Protocol or IP  . I am using it.
 
 * Allow only **TCP**:
 
