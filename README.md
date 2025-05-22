@@ -24,3 +24,60 @@ A centralized list of local ports and deployed URLs for Earthface applications.
 > * Click the dropdown above to collapse or expand the table.
 > * You can replace the “No URL provided” placeholders as your deployments go live.
 > * Keep this file in sync with your actual deployment to avoid confusion.
+
+
+Sure! Let's break down the command:
+
+---
+
+### 🔐 Command:
+
+```bash
+sudo ufw allow 3079
+```
+
+### ✅ Meaning of Each Part:
+
+| Part    | Explanation                                                                                                                      |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `sudo`  | Runs the command with **superuser (admin)** privileges. Required for firewall changes.                                           |
+| `ufw`   | Stands for **Uncomplicated Firewall**, a user-friendly interface for managing firewall rules on Linux (typically Ubuntu/Debian). |
+| `allow` | Tells the firewall to **allow traffic** through a specific port.                                                                 |
+| `3079`  | The **port number** to be opened for incoming traffic.                                                                           |
+
+---
+
+### 💡 What This Does: sudo ufw allow 3079
+
+* It opens **port 3079** for **incoming TCP traffic** by default.
+* This means any application (e.g., a web server, backend API, etc.) listening on that port will now be reachable from outside your system.
+
+---
+
+### 🔍 Optional: Allow Specific Protocol or IP   .. I am using it.
+
+* Allow only **TCP**:
+
+  ```bash
+  sudo ufw allow 3079/tcp
+  ```
+* Allow only from a specific IP (e.g. only from your office IP):
+
+  ```bash
+  sudo ufw allow from 203.0.113.1 to any port 3079
+  ```
+
+---
+
+### 📋 Check Status:
+
+To see current firewall rules:
+
+```bash
+sudo ufw status
+```
+
+---
+
+
+
